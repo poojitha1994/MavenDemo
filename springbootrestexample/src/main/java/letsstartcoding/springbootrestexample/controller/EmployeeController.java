@@ -45,7 +45,7 @@ public class EmployeeController {
 		}*/
 		return ResponseEntity.ok().body(emp);
 		}
-
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PutMapping("/Employees/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable(value="id") Long empid,@Valid @RequestBody Employee empdetails){
 		Employee emp= employeedao.findOne(empid);
